@@ -39,7 +39,7 @@ func getNonce(node, priv string) (uint64, error) {
 		log.Fatalf("Failed to get nonce: %v", err)
 		return 0, err
 	}
-	fmt.Println("nonce is ------- ", nonce)
+	fmt.Println("nonce now is ------- ", nonce)
 	return nonce, nil
 }
 func getChainID(node string) (*big.Int, error) {
@@ -53,7 +53,7 @@ func getChainID(node string) (*big.Int, error) {
 		log.Fatalf("Failed to get chain ID: %v", err)
 		return nil, err
 	}
-	fmt.Println("chainID ------- ", chainID)
+	fmt.Println("chain id is ------- ", chainID)
 	return chainID, nil
 }
 func do(node string, priv string, msg string, nonce uint64, chainID *big.Int, gasPrice_ int64) error {
@@ -127,12 +127,12 @@ func main() {
 		panic(err)
 	}
 
-	sleel_, err := strconv.ParseInt(Sleep, 10, 64)
+	sleep_, err := strconv.ParseInt(Sleep, 10, 64)
 	if err != nil {
 		panic(err)
 	}
 	for i := 0; i < int(loopTotal_); i++ {
-		time.Sleep(time.Duration(sleel_) * time.Millisecond)
+		time.Sleep(time.Duration(sleep_) * time.Millisecond)
 		if err := do(Node, Priv, Msg, nonceNow, chainID, gas); err != nil {
 			panic(err)
 		}
