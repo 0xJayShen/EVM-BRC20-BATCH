@@ -107,27 +107,30 @@ func main() {
 		Msg       = os.Args[3]
 		Gas       = os.Args[4]
 		LoopTotal = os.Args[5]
-		Sleep     = os.Args[6]
+		SleepTime = os.Args[6]
 	)
 
 	nonceNow, err := getNonce(Node, Priv)
 	if err != nil {
 		panic(err)
 	}
+
 	chainID, err := getChainID(Node)
 	if err != nil {
 		panic(err)
 	}
+
 	gas, err := strconv.ParseInt(Gas, 10, 64)
 	if err != nil {
 		panic(err)
 	}
+
 	loopTotal_, err := strconv.ParseInt(LoopTotal, 10, 64)
 	if err != nil {
 		panic(err)
 	}
 
-	sleep_, err := strconv.ParseInt(Sleep, 10, 64)
+	sleep_, err := strconv.ParseInt(SleepTime, 10, 64)
 	if err != nil {
 		panic(err)
 	}
