@@ -9,7 +9,7 @@
 
 #### 使用步骤
 
-1. clone 或者 下载 [本仓库](/0xJayShen/EVM-BRC20-BATCH/archive/refs/heads/main.zip)
+1. clone 或者 下载 [本仓库](https://github.com/0xJayShen/EVM-BRC20-BATCH/archive/refs/heads/main.zip)
 2. 使用对应的二进制文件运行
    - mac 用户
     ```shell
