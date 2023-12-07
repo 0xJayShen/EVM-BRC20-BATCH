@@ -139,5 +139,6 @@ func main() {
 		if err := do(Node, Priv, Msg, nonceNow, chainID, gas); err != nil {
 			panic(err)
 		}
+		nonceNow++
 	}
 }
